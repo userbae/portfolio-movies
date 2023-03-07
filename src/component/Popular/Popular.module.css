@@ -1,0 +1,28 @@
+.pop_box {
+  padding: 0 10%;
+}
+
+.pop_wrap {
+  display: flex;
+  overflow: hidden;
+}
+
+.pop_img {
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+.pop_title {
+  position: absolute;
+  z-index: 100;
+  bottom: 15px;
+  left: 10px;
+  color: #fff;
+  display: none;
+  font-size: 18px;
+}
+
+.pop_img:hover .pop_title {
+  display: block;
+
+}

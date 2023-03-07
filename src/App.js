@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Header from './component/Header/Header';
+import Home from './pages/Home/Home';
+import PopularDetail from './pages/PopularDetail/PopularDetail';
 
+
+const API_KEY = process.env.REACT_APP_API_KEY
 function App() {
+  const [pop, setPop] = useState([]);
+  const Api = async () => {
+    await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
+      .then((res) => {
+        setPop(res.data.results)
+      })
+  }
+  useEffect(() => {
+    Api()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home pop={pop}/>} />
+        <Route path='/detail/:id' element={<PopularDetail />} />
+      </Routes>
     </div>
   );
 }

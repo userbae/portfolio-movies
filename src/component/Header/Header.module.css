@@ -1,0 +1,16 @@
+.Header_box {
+  padding: 0 10%;
+  background-color: #f0f0f0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+
+
+
+ul {
+  list-style: none;
+}
