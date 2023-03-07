@@ -1,17 +1,27 @@
-.button {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  transform: translate(0, -50%);
+.slick {
+  position: relative;
   cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: none;
-  background: transparent;
-  background-color: pink;
+}
+
+.slick_title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 220px;
+  color: white;
+  font-size: 20px;
+  display: none;
+}
+
+.slick:hover .slick_title {
+  display: block;
+}
+
+.slick:hover::before {
+  position: absolute;
+  left:0;
+  width: 220px;
+  height: 100%;
+  content: '';
+  background: linear-gradient(to top, black, transparent);
 }
