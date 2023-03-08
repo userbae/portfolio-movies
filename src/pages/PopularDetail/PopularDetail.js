@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import DetailNav from '../../component/DetailNav/DetailNav'
 import Revieiws from '../../component/Reviews/Revieiws'
 import Videos from '../../component/Videos/Videos'
 import style from './PopularDetail.module.css'
@@ -31,18 +32,26 @@ const PopularDetail = () => {
   }, [loading])
   return (
   <div>
+    <DetailNav />
     {loading ? 
     <div className={style.detail_box}>
-      <div className={style.intro_box}>
-        <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${detail.poster_path}`} />
-        <div>
-          <h2>{detail.original_title}</h2>
-          {detail.adult && <div>청소년 이용 불가</div>}
-          <h3>overview</h3>
-          <h4>{detail.overview}</h4>
+      {console.log(detail)}
+      <div className={style.intro_box} 
+      style={{backgroundImage: `url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${detail.backdrop_path})`, backgroundSize: 'cover'}}>
+        <div className={style.intro_title} style={{backgroundImage: 'linear-gradient(to right, rgba(31.5, 31.5, 10.5, 1) calc((50vw - 170px) - 340px), rgba(31.5, 31.5, 10.5, 0.84) 50%, rgba(31.5, 31.5, 10.5, 0.84) 100%)'}}>
+          <div>
+          <img src={`https://www.themoviedb.org/t/p/w300_and_h450_face${detail.poster_path}`} />
+          <div>
+            <h2>{detail.original_title}</h2>
+            {detail.adult && <div>청소년 이용 불가</div>}
+            <h3>overview</h3>
+            <h4>{detail.overview}</h4>
+          </div>
+          </div>
+          </div>
+          
+        
       </div>
-
-        </div>
         <Videos video={video}/>
         <Revieiws review={review}/>
     </div> : <div>로딩중....</div>}

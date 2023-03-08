@@ -1,0 +1,5 @@
+.nav_box {
+  display: flex;
+  margin: 0 10%;
+  justify-content: center;
+}
