@@ -1,0 +1,7 @@
+.review_box {
+  padding: 0 10%;  
+}
+
+.review_wrap > div{
+  border: 1px solid black;
+}

@@ -9,7 +9,7 @@ const Videos = ({video}) => {
       <div className={style.video_wrap}>
         {video.results.map((data) => {
           return(
-            <div>
+            <div key={data.key}>
               <ReactPlayer url={`https://www.youtube.com/watch?v=${data.key}`} /> 
             </div>
           )

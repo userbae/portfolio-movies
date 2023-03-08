@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import DetailNav from '../../component/DetailNav/DetailNav'
-import Revieiws from '../../component/Reviews/Revieiws'
+import Reviews from '../../component/Reviews/Reviews'
 import Videos from '../../component/Videos/Videos'
 import style from './PopularDetail.module.css'
 
@@ -35,7 +35,6 @@ const PopularDetail = () => {
     <DetailNav />
     {loading ? 
     <div className={style.detail_box}>
-      {console.log(detail)}
       <div className={style.intro_box} 
       style={{backgroundImage: `url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${detail.backdrop_path})`, backgroundSize: 'cover'}}>
         <div className={style.intro_title} style={{backgroundImage: 'linear-gradient(to right, rgba(31.5, 31.5, 10.5, 1) calc((50vw - 170px) - 340px), rgba(31.5, 31.5, 10.5, 0.84) 50%, rgba(31.5, 31.5, 10.5, 0.84) 100%)'}}>
@@ -53,7 +52,7 @@ const PopularDetail = () => {
         
       </div>
         <Videos video={video}/>
-        <Revieiws review={review}/>
+        <Reviews review={review}/>
     </div> : <div>로딩중....</div>}
   </div>)
 
