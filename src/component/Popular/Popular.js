@@ -5,7 +5,7 @@ import style from './Popular.module.css'
 const Popular = ({pop}) => {
   return (
     <div className={style.pop_box}>
-      <h2>Popular</h2>
+      <h2>the current popular movies the top rated movies </h2>
       <ReactSlick pop={pop}/>
     </div>
   )

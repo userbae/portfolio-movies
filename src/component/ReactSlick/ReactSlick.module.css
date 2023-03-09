@@ -25,3 +25,33 @@
   content: '';
   background: linear-gradient(to top, black, transparent);
 }
+
+.slick_slide {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  cursor: pointer;
+}
+
+.slick_slide img {
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.slick_slide_title {
+  margin: 0 10px 10px;
+}
+
+.slick_slide::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  
+}
+.slick_slide::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+}
+.slick_slide::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 10px;
+}

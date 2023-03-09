@@ -42,6 +42,7 @@ const PopularDetail = () => {
           <img src={`https://www.themoviedb.org/t/p/w300_and_h450_face${detail.poster_path}`} />
           <div>
             <h2>{detail.original_title}</h2>
+            Score {detail.vote_average}
             {detail.adult && <div>청소년 이용 불가</div>}
             <h3>overview</h3>
             <h4>{detail.overview}</h4>
@@ -52,7 +53,7 @@ const PopularDetail = () => {
         
       </div>
         <Videos video={video}/>
-        <Reviews review={review}/>
+        {/* <Reviews review={review}/> */}
     </div> : <div>로딩중....</div>}
   </div>)
 
