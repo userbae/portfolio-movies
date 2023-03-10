@@ -3,7 +3,6 @@ import style from './Credits.module.css'
 
 // https://www.themoviedb.org/t/p/w138_and_h175_face/tlAX3f82Mf5h0rznpVBVK7nD2om.jpg
 const Credits = ({credit}) => {
-  console.log(credit)
   return (
     <div className={style.credits_box}>
       <div>cast</div>
