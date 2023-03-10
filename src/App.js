@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <div >
+    <div className='body'>
       <Header />
       <Routes>
         <Route path='/' element={<Home pop={pop} com={com}/>} />

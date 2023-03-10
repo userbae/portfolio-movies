@@ -12,7 +12,6 @@ const Search = () => {
   const Api = async () => {
     await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${search}`)
     .then((res)=>{
-      console.log(res.data.results)
       setSearchData(res.data.results)
     })
   }

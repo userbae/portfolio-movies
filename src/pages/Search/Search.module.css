@@ -1,5 +1,6 @@
 .search_box {
   margin: 10px 10% 0;
+  min-height: 100vh;
 }
 
 .search_input {

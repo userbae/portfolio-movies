@@ -2,7 +2,6 @@ import React from 'react'
 import style from './Keyword.module.css'
 
 const Keyword = ({genres}) => {
-  console.log(genres)
   return (
     <div className={style.Keyword_box}>
       <div>genres</div>

@@ -46,7 +46,6 @@ const PopularDetail = () => {
           <div>
             <h2>{detail.original_title}</h2>
             Score {detail.vote_average}
-            {console.log(detail)}
             {detail.adult && <div>청소년 이용 불가</div>}
             <h3>overview</h3>
             <h4>{detail.overview}</h4>
