@@ -22,35 +22,37 @@ const Search = () => {
   }, [search])
   return (
     <div className={style.search_box}>
-      <div>
-        <div>검색하기</div>
+      <div className={style.search_input}>
         <input type='text' 
+        placeholder='영회제목 검색'
         onChange={(e) => {
           setSearch(e.target.value)
         }}/>
       </div>
-      <div>
-        {searchData.map((data)=>{
-          return (
-            <div className={style.search_wrap}
-            key={data.id}
-            onClick={() => {
-              navigtae(`/detail/${data.id}`)
-            }}
-            >
-              <img src={`https://www.themoviedb.org/t/p/w150_and_h225_face${data.poster_path}`} />
-              <div>
-                <div>{data.original_title} ({data.release_date})</div>
-                <div>language : {data.original_language}</div>
-                <div>{data.adult && <div>청소년 이용 불가</div>}</div>
-                <div>Score {data.vote_average}</div>
-                <div className={style.search_intro}>{data.overview}</div>
-              </div>
+      
+    <div>
+      {searchData.map((data)=>{
+        return (
+          <div className={style.search_wrap}
+          key={data.id}
+          onClick={() => {
+            navigtae(`/detail/${data.id}`)
+          }}
+          >
+            <img src={`https://www.themoviedb.org/t/p/w150_and_h225_face${data.poster_path}`} />
+            <div>
+              <div>{data.original_title} </div>
+              <div>({data.release_date})</div>
+              <div>language : {data.original_language}</div>
+              <div>{data.adult && <div>청소년 이용 불가</div>}</div>
+              <div>Score {data.vote_average}</div>
+              <div className={style.search_intro}>{data.overview}</div>
             </div>
-          )
-        })}
-      </div>
+          </div>
+        )
+      })}
     </div>
+  </div>
   )
 }
 
