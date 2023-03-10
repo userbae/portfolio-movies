@@ -4,10 +4,8 @@
 
 .intro_box {
   display: flex;
-
   background-size: cover;
   background-repeat: no-repeat;
-  
 }
 
 .intro_box img {
@@ -21,4 +19,11 @@
   color: white;
   align-items: center;
   margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 800px){
+  .intro_title >div {
+    display: block;
+  }
 }

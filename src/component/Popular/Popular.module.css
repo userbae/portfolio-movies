@@ -2,6 +2,10 @@
   padding: 0 10%;
 }
 
+.pop_box h2 {
+  margin-bottom: 3px;
+}
+
 .pop_wrap {
   display: flex;
   overflow: hidden;
@@ -24,5 +28,10 @@
 
 .pop_img:hover .pop_title {
   display: block;
+}
 
+@media screen and (max-width: 800px) {
+  .pop_box {
+    padding: 0 3%;
+  }
 }

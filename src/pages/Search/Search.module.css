@@ -30,6 +30,14 @@
   margin-right: 15px;
 }
 
+.search_intro {
+  width: 400px;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 @media screen and (max-width: 800px){
   .search_box{
     display: block;
@@ -43,7 +51,11 @@
   }
   .search_wrap {
     margin-left: 0px;
-    font-size: 10px;
-    width: 100%;
+  }
+  .search_wrap > div {
+    width: 150px;
+  }
+  .search_intro {
+    width: 150px;
   }
 }

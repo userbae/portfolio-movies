@@ -44,7 +44,7 @@ const Search = () => {
                 <div>language : {data.original_language}</div>
                 <div>{data.adult && <div>청소년 이용 불가</div>}</div>
                 <div>Score {data.vote_average}</div>
-                <div>{data.overview}</div>
+                <div className={style.search_intro}>{data.overview}</div>
               </div>
             </div>
           )
