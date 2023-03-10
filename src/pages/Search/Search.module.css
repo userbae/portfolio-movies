@@ -3,6 +3,7 @@
   margin: 10px 10% 0;
 }
 
+
 .search_box input {
   border-radius: 10px;
   border: none;
@@ -27,4 +28,22 @@
 .search_wrap img {
   border-radius: 15px;
   margin-right: 15px;
+}
+
+@media screen and (max-width: 800px){
+  .search_box{
+    display: block;
+    margin: 10px 3% 0;
+  }
+  .search_box > div {
+    margin-bottom: 10px;
+  }
+  .search_box input {
+    width: 50%;
+  }
+  .search_wrap {
+    margin-left: 0px;
+    font-size: 10px;
+    width: 100%;
+  }
 }
