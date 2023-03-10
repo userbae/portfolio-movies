@@ -5,10 +5,7 @@ const Home = ({pop, com}) => {
     console.log(pop, com)
   return (
     <div>
-
-      <Popular pop={pop}/>
-      <Popular pop={com}/>
-
+      <Popular pop={pop} com={com}/>
     </div>
   )
 }

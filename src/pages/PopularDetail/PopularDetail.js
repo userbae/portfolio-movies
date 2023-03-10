@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import DetailNav from '../../component/DetailNav/DetailNav'
+import Keyword from '../../component/Keyword/Keyword'
 import Reviews from '../../component/Reviews/Reviews'
 import Videos from '../../component/Videos/Videos'
 import style from './PopularDetail.module.css'
@@ -11,10 +12,12 @@ const API_KEY = process.env.REACT_APP_API_KEY
 const PopularDetail = () => {
   const [detail, setDetail] = useState();
   const [review, setReview] = useState();
+  const [keywords, setKeywords] = useState();
   const [video, setVideo] = useState();
   const [loading, setLoading] = useState(false);
   const params = useParams()
 
+  
   const Api = async () => {
     await axios.all(
       [axios.get(`https://api.themoviedb.org/3/movie/${params.id}?api_key=${API_KEY}&language=en-US`),
@@ -43,9 +46,12 @@ const PopularDetail = () => {
           <div>
             <h2>{detail.original_title}</h2>
             Score {detail.vote_average}
+            {console.log(detail)}
             {detail.adult && <div>청소년 이용 불가</div>}
             <h3>overview</h3>
             <h4>{detail.overview}</h4>
+
+            <Keyword genres={detail.genres}/>
           </div>
           </div>
           </div>

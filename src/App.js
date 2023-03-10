@@ -6,8 +6,9 @@ import Footer from './component/Footer/Footer';
 import Header from './component/Header/Header';
 import Home from './pages/Home/Home';
 import PopularDetail from './pages/PopularDetail/PopularDetail';
+import Search from './pages/Search/Search';
 
-//
+
 const API_KEY = process.env.REACT_APP_API_KEY
 function App() {
   const [pop, setPop] = useState([]);
@@ -32,6 +33,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home pop={pop} com={com}/>} />
         <Route path='/detail/:id' element={<PopularDetail />} />
+        <Route path='/search' element={<Search />} />
       </Routes>
       <Footer />
     </div>

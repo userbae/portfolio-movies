@@ -1,0 +1,30 @@
+.search_box {
+  display: flex;
+  margin: 10px 10% 0;
+}
+
+.search_box input {
+  border-radius: 10px;
+  border: none;
+  background-color: gray;
+  padding: 5px 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.search_box input:focus {outline: none;}
+
+
+
+.search_wrap {
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 600px;
+  cursor: pointer;
+}
+
+.search_wrap img {
+  border-radius: 15px;
+  margin-right: 15px;
+}

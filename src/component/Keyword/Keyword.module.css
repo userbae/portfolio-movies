@@ -1,0 +1,12 @@
+.Keyword_box > div {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.Keyword_wrap div {
+  display: inline-block;
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: gray;
+  font-size: 12px;
+}
